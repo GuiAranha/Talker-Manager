@@ -11,6 +11,15 @@ router.post('/talker',
     middlewares.validateName,
     middlewares.validateDate,
     middlewares.validateAge,
+    middlewares.validateRate,
     services.postTalker);
+router.put('/talker/:id',
+    middlewares.validateToken,
+    middlewares.validateTalker,
+    middlewares.validateName,
+    middlewares.validateDate,
+    middlewares.validateAge,
+    middlewares.validateRate,
+    services.putTalkerId);
 
 module.exports = router;

@@ -3,6 +3,7 @@ const getAllTalkers = require('./getAllTalkers');
 const getTalkerById = require('./getTalkerById');
 const postLogin = require('./postLogin');
 const postTalker = require('./postTalker');
+const putTalkerId = require('./putTalkerId');
 
 module.exports = {
     generateToken,
@@ -10,4 +11,5 @@ module.exports = {
     getTalkerById,
     postLogin,
     postTalker,
+    putTalkerId,
 };
