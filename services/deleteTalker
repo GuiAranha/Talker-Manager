@@ -1,0 +1,13 @@
+const fs = require('fs').promises;
+const read = require('../helpers/readFile');
+
+const deleteTalker = async (req, res) => {
+    const id = Number(req.params.id);
+    const data = await read();
+    const talkers = JSON.parse(data);
+    const newData = talkers.filter((item) => (item.id) !== (id));
+    await fs.writeFile('./talker.json', JSON.stringify(newData));
+    return res.status(204).send();
+};
+
+module.exports = deleteTalker;

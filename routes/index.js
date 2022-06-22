@@ -21,5 +21,7 @@ router.put('/talker/:id',
     middlewares.validateAge,
     middlewares.validateRate,
     services.putTalkerId);
-
+router.delete('/talker/:id',
+    middlewares.validateToken,
+    services.deleteTalker);
 module.exports = router;
